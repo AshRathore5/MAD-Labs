@@ -10,7 +10,113 @@ It focuses on Dart fundamentals required before building Flutter applications.
 ![Level](https://img.shields.io/badge/Level-Beginner--to--Intermediate-orange.svg)
 
 ---
+# 📱 Lab 01 — Environment Setup for Flutter Development
 
+This lab guides students through installing the required tools for Flutter mobile app development, including the Flutter SDK, Android SDK, and development environment setup.
+
+---
+
+## 🎯 Objective
+By completing this lab, students will be able to:
+
+- Install Flutter SDK
+- Configure Android SDK
+- Set up an IDE for Flutter development
+- Verify installation using Flutter Doctor
+
+---
+
+## 🖥 System Requirements
+
+- Windows / macOS / Linux
+- Minimum 8 GB RAM recommended
+- At least 10 GB free disk space
+- Stable internet connection
+
+---
+
+## 🔧 Step 1 — Install Git
+
+Flutter requires Git for installation and updates.
+
+1. Download Git from the official website  
+   https://git-scm.com/downloads  
+2. Install with default settings.
+3. Verify installation:
+
+```bash
+git --version
+```
+---
+## 🚀 Step 2 — Install Flutter SDK
+
+1. Download [Flutter SDK](https://docs.flutter.dev/get-started/install)
+2. xtract the zip file to a permanent location, e.g.:
+```bash
+C:\flutter
+```
+3. Add Flutter to PATH:
+
+- Open Environment Variables
+- Add the path:
+```bash
+C:\flutter\bin
+```
+4. Verify installation:
+```bash
+flutter --version
+```
+---
+## 🤖 Step 3 — Install Android Studio (Android SDK)
+
+1. Download [Android Studio](https://developer.android.com/studio)
+2. Install with default settings.
+3. During installation, ensure the following are selected:
+    - Android SDK
+    - Android SDK Platform Tools
+    - Android Emulator
+    - Open Android Studio → More Actions → SDK Manager
+Install:
+- Latest Android SDK Platform
+- Android SDK Command-line Tools
+---
+## ⚙ Step 4 — Configure Flutter with Android SDK
+
+Run:
+```bash
+flutter doctor
+```
+Follow any instructions shown in the output.
+Accept Android licenses:
+```bash
+flutter doctor --android-licenses
+```
+Press y for all prompts.
+
+---
+## 🧪 Step 5 — Test Flutter Setup
+
+Create a test project:
+```bash
+flutter create test_app
+cd test_app
+flutter run
+```
+If an emulator or device is connected, the default Flutter app should launch.
+
+---
+## 📱 Step 6 — Setup Emulator (Optional)
+
+1. Open Android Studio
+2. Go to Device Manager
+3. Create a virtual device (Pixel recommended)
+4. Select latest Android version
+5. Launch emulator and run:
+
+```bash
+flutter devices
+```
+---
 # 🧪 Lab 02 — Implement Dart Basics
 
 
