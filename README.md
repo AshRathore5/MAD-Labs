@@ -10,8 +10,208 @@ It focuses on Dart fundamentals required before building Flutter applications.
 ![Level](https://img.shields.io/badge/Level-Beginner--to--Intermediate-orange.svg)
 
 ---
+# 📱 Lab 01 — Environment Setup for Flutter Development
 
+This lab guides students through installing the required tools for Flutter mobile app development, including the Flutter SDK, Android SDK, and development environment setup.
+
+---
+
+## 🎯 Objective
+By completing this lab, students will be able to:
+
+- Install Flutter SDK
+- Configure Android SDK
+- Set up an IDE for Flutter development
+- Verify installation using Flutter Doctor
+
+---
+
+## 🖥 System Requirements
+
+- Windows / macOS / Linux
+- Minimum 8 GB RAM recommended
+- At least 10 GB free disk space
+- Stable internet connection
+
+---
+
+## 🔧 Step 1 — Install Git
+
+Flutter requires Git for installation and updates.
+
+1. Download Git from the official website  
+   https://git-scm.com/downloads  
+2. Install with default settings.
+3. Verify installation:
+
+```bash
+git --version
+```
+---
+## 🚀 Step 2 — Install Flutter SDK
+
+1. Download [Flutter SDK](https://docs.flutter.dev/get-started/install)
+2. xtract the zip file to a permanent location, e.g.:
+```bash
+C:\flutter
+```
+3. Add Flutter to PATH:
+
+- Open Environment Variables
+- Add the path:
+```bash
+C:\flutter\bin
+```
+4. Verify installation:
+```bash
+flutter --version
+```
+---
+## 🤖 Step 3 — Install Android Studio (Android SDK)
+
+1. Download [Android Studio](https://developer.android.com/studio)
+2. Install with default settings.
+3. During installation, ensure the following are selected:
+    - Android SDK
+    - Android SDK Platform Tools
+    - Android Emulator
+    - Open Android Studio → More Actions → SDK Manager
+Install:
+- Latest Android SDK Platform
+- Android SDK Command-line Tools
+---
+## ⚙ Step 4 — Configure Flutter with Android SDK
+
+Run:
+```bash
+flutter doctor
+```
+Follow any instructions shown in the output.
+Accept Android licenses:
+```bash
+flutter doctor --android-licenses
+```
+Press y for all prompts.
+
+---
+## 🧪 Step 5 — Test Flutter Setup
+
+Create a test project:
+```bash
+flutter create test_app
+cd test_app
+flutter run
+```
+If an emulator or device is connected, the default Flutter app should launch.
+
+---
+## 📱 Step 6 — Setup Emulator (Optional)
+
+1. Open Android Studio
+2. Go to Device Manager
+3. Create a virtual device (Pixel recommended)
+4. Select latest Android version
+5. Launch emulator and run:
+
+```bash
+flutter devices
+```
+---
 # 🧪 Lab 02 — Implement Dart Basics
 
 
 This lab contains beginner-level Dart programming exercises designed to build problem-solving skills, logic development, and familiarity with user input, lists, loops, functions, and random number generation.
+
+## 🛠 Requirements
+- Dart SDK installed
+- Any Dart IDE or editor (VS Code recommended)
+
+## 📘 Exercise List
+
+### Exercise 1 – Age to 100
+Create a program that asks the user for their name and age, then tells them how many years remain until they turn 100.
+
+### Exercise 2 – Even or Odd
+Ask the user for a number and print whether it is even or odd.
+
+### Exercise 3 – Elements Less Than 5
+Given a list  
+`a = [1,1,2,3,5,8,13,21,34,55,89]`  
+print all elements less than 5.
+
+### Exercise 4 – Divisors of a Number
+Ask the user for a number and print all of its divisors.
+
+### Exercise 5 – Common Elements of Two Lists
+Given two lists, return a new list containing only common elements **without duplicates**, regardless of list sizes.
+
+### Exercise 6 – Palindrome Checker
+Ask the user for a string and check whether it reads the same forwards and backwards.
+
+### Exercise 7 – Even Numbers from List
+Given  
+`a = [1,4,9,16,25,36,49,64,81,100]`  
+create a Dart program that generates a new list containing only the even elements.
+
+### Exercise 8 – Rock-Paper-Scissors Game
+Create a two-player Rock-Paper-Scissors game against the computer.  
+Take user input, compare with computer choice, and print the winner.
+
+### Exercise 9 – Number Guessing Game
+Generate a random number between 1 and 100.  
+Ask the user to guess until correct and display whether guesses are too high or too low.  
+Track total guesses taken.
+
+### Exercise 10 – Prime Number Function
+Create a function that checks whether a given number is prime.
+
+### Exercise 11 – Remove Duplicates from List
+Write a function that takes a list and returns a new list without duplicate elements.
+
+### Exercise 12 – Password Generator
+Create a password generator in Dart:
+- Strong passwords include uppercase, lowercase, numbers, and symbols.
+- Generate a new random password each time.
+- Ask the user how strong they want their password (weak, medium, strong).
+- Implement run-time code in the `main()` method.
+
+### Exercise 13 – Cows and Bulls Game
+The program:
+1. Generates a random 4-digit number.
+2. User guesses the number.
+3. Correct digit in correct place → **Cow**
+4. Correct digit in wrong place → **Bull**
+5. Game ends when guessed correctly.
+6. Display total guesses.
+
+### Exercise 14 – Draw Game Board
+Time for some fake graphics! Let’s say we want to draw game boards that look like this:
+
+|   |   |   |
+|---|---|---|
+|   |   |   |
+|   |   |   |
+
+This one is 3x3 (like in tic tac toe).
+Ask the user what size game board they want to draw, and draw it for them to the screen using Dart’s `print()` statement.
+
+### Exercise 15 – Computer Guesses Your Number
+User thinks of a number between 0 and 100.  
+The program guesses and the user responds:
+- Too high
+- Too low
+- Correct  
+Display total guesses taken by the computer.
+
+### Exercise 16 – Birthday Dictionary
+For this exercise, we will keep track of when our friend’s birthdays are, and be able to find that information based on their name.
+Create a dictionary (in your file) of names and birthdays. When you run your program it should ask the user to enter a name, and return the birthday of that person back to them. The interaction should look something like this:
+> Welcome to the birthday dictionary. We know the birthdays of:
+Albert Einstein
+Benjamin Franklin
+Ada Lovelace
+
+> Who's birthday do you want to look up?
+Benjamin Franklin
+
+> Benjamin Franklin's birthday is 01/17/1706
